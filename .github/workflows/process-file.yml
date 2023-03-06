@@ -1,0 +1,39 @@
+name: Process File
+
+on:
+  push:
+    branches: [A]
+
+jobs:
+  process_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Process file
+        run: node process-file.js path/to/input-file
+
+      - name: Commit output file
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: "Add processed file"
+          add: "path/to/output-file"
+          author_name: "GitHub Actions"
+          author_email: "actions@github.com"
+          signoff: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_COMMITTER_NAME: "GitHub Actions"
+          GIT_COMMITTER_EMAIL: "actions@github.com"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: B
+          force: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
