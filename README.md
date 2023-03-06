@@ -62,3 +62,6 @@ Please give me some examples for "(vocabulary)".
 ```
 "(paragraph) This paragraph is correctly?
 ```
+```
+"(sentence)" This sentence is grammatically correctly?
+```
