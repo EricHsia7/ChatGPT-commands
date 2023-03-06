@@ -1,10 +1,10 @@
 # ChatGPT-commands
-### Writing
-## Collect data
+## Writing
+### Collect data
 ```
 Please write some search engine sentences for “(topic)”.
 ```
-## Organize data
+### Organize data
 ```
 Generate the summary for the passage, and it includes 10 short sentences. Passage: (passage)
 ```
@@ -17,11 +17,11 @@ Rephrase “(sentence)” to make it clear and short.
 ```
 Rephrase the passage. Passage: (passage)
 ```
-## Creating
+### Creating
 ```
 Expand “(topic/title)” with (specific language).
 ```
-## Find some inspiration
+### Find some inspiration
 ```
 Please write an outline for “(topic/title)”.
 ```
