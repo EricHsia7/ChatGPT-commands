@@ -2,7 +2,7 @@ name: Process File
 
 on:
   push:
-    branches: [A]
+    branches: [json]
 
 jobs:
   process_file:
@@ -15,25 +15,25 @@ jobs:
         run: npm install
 
       - name: Process file
-        run: node process-file.js path/to/input-file
+        run: node process-file.js script/process.js
 
       - name: Commit output file
         uses: EndBug/add-and-commit@v7
         with:
           message: "Add processed file"
-          add: "path/to/output-file"
-          author_name: "GitHub Actions"
-          author_email: "actions@github.com"
+          add: "README.md"
+          author_name: "EricHsia7"
+          author_email: ${{ secrets.GITHUB_EMAIL }}
           signoff: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_COMMITTER_NAME: "GitHub Actions"
-          GIT_COMMITTER_EMAIL: "actions@github.com"
+          GIT_COMMITTER_NAME: "EricHsia7"
+          GIT_COMMITTER_EMAIL: ${{ secrets.GITHUB_EMAIL }}
           
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          branch: B
+          branch: main
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
