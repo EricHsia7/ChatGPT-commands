@@ -3,7 +3,7 @@ name: Process File
 on:
   push:
     branches: json
-
+  workflow_dispatch:
 jobs:
   process_file:
     runs-on: ubuntu-latest
