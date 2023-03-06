@@ -2,7 +2,7 @@ name: Process File
 
 on:
   push:
-    branches: [json]
+    branches: json
 
 jobs:
   process_file:
