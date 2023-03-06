@@ -15,7 +15,7 @@ jobs:
         run: npm install
 
       - name: Process file
-        run: node script/process.js
+        run: node script/process.js index.json
 
       - name: Commit output file
         uses: EndBug/add-and-commit@v7
