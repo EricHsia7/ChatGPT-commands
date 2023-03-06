@@ -44,7 +44,7 @@ What is part of speech for "(vocabulary)"?
 What are verb forms for "(vocabulary)"?
 ```
 ```
-"(vocabulary)" vs "(vocabulary)" vs "vocabulary"
+"(vocabulary)" vs "(vocabulary)" vs "(vocabulary)"
 ```
 ```
 Please give me some examples for "(vocabulary)".
