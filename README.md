@@ -2,7 +2,7 @@
 ### Writing
 ## Collect data
 ```
-Please write some search engine sentence for “(topic)”.
+Please write some search engine sentences for “(topic)”.
 ```
 ## Organize data
 ```
