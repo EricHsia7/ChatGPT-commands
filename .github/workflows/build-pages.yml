@@ -1,0 +1,27 @@
+name: Build Pages
+
+on:
+  push:
+    branches:
+      - main # Change this to the branch where your markdown files are located
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build pages
+        run: npx @11ty/eleventy
+
+      - name: Deploy pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: pages # Change this to the branch where you want to publish the generated files
